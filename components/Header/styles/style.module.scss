@@ -72,6 +72,11 @@
             align-items: center;
             justify-content: center;
 
+            a {
+                display: flex;
+                align-items: center;
+            }
+
             span {
                 padding-left: .3rem;
             }

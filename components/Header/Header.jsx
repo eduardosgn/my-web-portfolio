@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Head from 'next/head';
 import React, { useRef, useEffect } from 'react';
 import gsap, { EasePack } from 'gsap';
 
@@ -21,6 +22,9 @@ export default function Header() {
 
     return (
         <>
+            <Head>
+                <title>Portfólio | Eduardo Nascimento</title>
+            </Head>
             <div className={styles.headerContainer} ref={el => app = el}>
                 <div className={ styles.headTextAndImg }>
                     <img src='/me.png' alt="Eduardo Nascimento" width={ 120 } height={ 120 } />
