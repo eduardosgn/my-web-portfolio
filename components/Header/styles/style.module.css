@@ -67,6 +67,7 @@
 
 .headerContainer .about p {
   text-align: center;
+  font-size: 1.2rem;
   line-height: 1.5;
 }
 
@@ -92,6 +93,7 @@
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   padding-bottom: .2rem;
+  font-weight: bold;
   cursor: pointer;
 }
 
