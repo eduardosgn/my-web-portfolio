@@ -4,9 +4,13 @@ export default function Header() {
     return (
         <>
             <div className={styles.headerContainer}>
-                <h1>
-                    Eduardo Nascimento
-                </h1>
+                <div className={ styles.headTextAndImg }>
+                    <img src='/me.png' alt="Eduardo Nascimento" width={ 120 } height={ 120 } />
+
+                    <h1>
+                        Eduardo Nascimento
+                    </h1>
+                </div>
 
                 <div className={ styles.about }>
                     <p>

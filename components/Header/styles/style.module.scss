@@ -6,14 +6,29 @@
     justify-content: center;
     flex-direction: column;
 
-    h1 {
-        margin: 0 0 .5rem 0;
-        font-size: 3.2rem;
-        text-align: center;
-    }
-
     b {
         color: rgb(2, 235, 235);
+    }
+
+    .headTextAndImg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            margin: 1rem 0 .5rem 0;
+            font-size: 3.2rem;
+            text-align: center;
+        }
+
+        img {
+            transition: opacity .2s ease-in-out;
+
+            &:hover {
+                opacity: .6;
+            }
+        }
     }
 
     .about {
@@ -21,6 +36,12 @@
         margin: 1rem 0;
         border-top: 2px solid #f2f2f2;
         border-bottom: 2px solid #f2f2f2;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            border-top: 2px solid rgb(2, 235, 235);
+            border-bottom: 2px solid rgb(2, 235, 235);
+        }
         
         p {
             text-align: center;
