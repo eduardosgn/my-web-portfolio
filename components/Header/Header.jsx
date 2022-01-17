@@ -1,6 +1,7 @@
+import Link from 'next/link';
+
 import styles from './styles/style.module.css';
 import { FaUserTag, FaBezierCurve, FaGraduationCap, FaGlobe, FaBehanceSquare, FaGithub } from "react-icons/fa";
-import Link from 'next/link';
 
 export default function Header() {
     return (

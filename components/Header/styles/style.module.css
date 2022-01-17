@@ -155,9 +155,13 @@
   .headerContainer {
     margin-top: 0;
     height: 100vh;
+    background: url(../../../public/listras-bg-desk.png);
   }
   .headerContainer .headTextAndImg h1 {
+    margin: 1rem 0 3rem 0;
     font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: .6rem;
   }
   .headerContainer .headTextAndImg img {
     width: 180px;
@@ -177,6 +181,7 @@
     margin-right: 4.5rem;
   }
   .headerContainer .socialContact {
+    margin-top: 4rem;
     max-width: 70%;
   }
 }
