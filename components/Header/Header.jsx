@@ -1,16 +1,31 @@
 import Link from 'next/link';
+import React, { useRef, useEffect } from 'react';
+import gsap, { EasePack } from 'gsap';
 
-import styles from './styles/style.module.css';
+import styles from './styles/style.module.scss';
 import { FaUserTag, FaBezierCurve, FaGraduationCap, FaGlobe, FaBehanceSquare, FaGithub } from "react-icons/fa";
 
 export default function Header() {
+    //Animações com GSAP
+    let app = useRef(null);
+    let title = useRef(null);
+
+    //Quando a página for carregada, as animações dão start
+    useEffect(() => {
+        //Animação do titulo
+        const titleH1 = title;
+
+        gsap.from(titleH1, { opacity: 0, y: 30, ease: "power3.inOut", duration: 1.2 });
+        gsap.from(app, { opacity: 0, ease: "power3.inOut", duration: 1 });
+    });
+
     return (
         <>
-            <div className={styles.headerContainer}>
+            <div className={styles.headerContainer} ref={el => app = el}>
                 <div className={ styles.headTextAndImg }>
                     <img src='/me.png' alt="Eduardo Nascimento" width={ 120 } height={ 120 } />
 
-                    <h1>
+                    <h1 ref={el => title = el}>
                         Eduardo Nascimento
                     </h1>
                 </div>
