@@ -1,4 +1,6 @@
 import styles from './styles/style.module.css';
+import { FaUserTag, FaBezierCurve, FaGraduationCap, FaGlobe, FaBehanceSquare, FaGithub } from "react-icons/fa";
+import Link from 'next/link';
 
 export default function Header() {
     return (
@@ -14,7 +16,7 @@ export default function Header() {
 
                 <div className={ styles.about }>
                     <p>
-                        <b>Web designer,</b> residente em Curitiba/PR, graduado em Design Gráfico pela Unicuritiba.
+                        <b>Web designer,</b> morando em Curitiba/PR, graduado em Design Gráfico pela Unicuritiba.
                     </p>
 
                     <p>
@@ -24,11 +26,53 @@ export default function Header() {
 
 
                 <ul className={ styles.aboutList }>
-                    <li>Mais sobre mim</li>
-                    <li>Meus trabalhos</li>
-                    <li>Minhas aptidões</li>
-                    <li>Contato</li>
+                    <li>
+                        <Link href='/about' passHref>
+                            <a>
+                                <FaUserTag />
+                                <span>Mais sobre mim</span>
+                            </a>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href='/jobs' passHref>
+                            <a>
+                                <FaBezierCurve />
+                                <span>Trabalhos/Projetos</span>
+                            </a>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href='/experiences' passHref>
+                            <a>
+                                <FaGraduationCap />
+                                <span>Experiência</span>
+                            </a>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href='/contact' passHref>
+                            <a>
+                                <FaGlobe />
+                                <span>Contato</span>
+                            </a>
+                        </Link>
+                    </li>
                 </ul>
+
+                <div className={ styles.socialContact }>
+                    <span>
+                        <Link href='https://www.behance.net/eduardosgndfc0'>
+                            <a><FaBehanceSquare /></a>
+                        </Link>
+                    </span>
+
+                    <span>
+                        <Link href='https://github.com/eduardosgn'>
+                            <a><FaGithub /></a>
+                        </Link>
+                    </span>
+                </div>
             </div>
         </>
     );
