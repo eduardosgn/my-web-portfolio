@@ -1,64 +1,74 @@
 import Link from 'next/link';
 import Head from 'next/head';
-import React, { useRef, useEffect } from 'react';
-import gsap from 'gsap';
+import { motion } from 'framer-motion';
 
 import styles from './styles/style.module.scss';
 import { FaUserTag, FaBezierCurve, FaGraduationCap, FaGlobe, FaBehanceSquare, FaGithub } from "react-icons/fa";
 
 import SocialContacts from '../SocialContacts/SocialContacts';
 
-export default function Header() {
-    //Animações com GSAP
-    let app = useRef(null);
-    let title = useRef(null);
-    let image = useRef(null);
+const easing = [.6, -.05, .01, 0.99];
 
-    //Quando a página for carregada, as animações dão start
-    useEffect(() => {
-        //Animação do titulo
-        const titleH1 = title;
-        gsap.from(titleH1, { opacity: 0, y: 30, ease: "power3.inOut", duration: 1.3 });
+const hotlinks = {
+    initial: { opacity: 1, y: 0 },
+    animate: { opacity: 0, y: 30 }
+};
 
-        //animação minha foto
-        const myImage = image;
-        gsap.from(myImage, 
-            { 
-                opacity: 0,
-                y: -35,
-                scale: 0.8,
-                ease: "power3.inOut",
-                duration: 1
-            });
-
-        //Animação de entrada da página
-        gsap.from(app, { opacity: 0, ease: "power3.inOut", duration: 1 });
-
-        //quando a página for carregada pela primeira vez, não haverá um "flash" sem animação antes da animação acontecer
-        gsap.set(app, {autoAlpha: 1});
-    });
-
+export default function Header() {    
     return (
-        <>
+        //Framer-motion animações
+        <motion.div
+            //define o estado inicial da animação
+            initial={{ opacity: 0, x: -100 }}
+            //define animação final
+            animate={{ opacity: 1, x: 0, transition: {
+                duration: .8
+            }}}
+            //Quando sai da página a animação é feita
+            exit={{ opacity: 0, x: 100 }}
+        >
             <Head>
                 <title>Portfólio | Eduardo Nascimento</title>
             </Head>
-            <div className={styles.headerContainer} ref={el => app = el}>
+            <div className={styles.headerContainer} >
                 <div className={ styles.headTextAndImg }>
-                    <img 
-                        src='/me.png' 
-                        alt="Eduardo Nascimento" 
-                        width={ 120 } 
-                        height={ 120 } 
-                        ref={el => image = el} 
-                    />
+                    <motion.div
+                        initial={{ y: -30, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1, transition: {
+                            duration: 1,
+                            ease: easing
+                        }}}
+                    >
+                        <img 
+                            src='/me.png' 
+                            alt="Eduardo Nascimento" 
+                            width={ 120 } 
+                            height={ 120 } 
+                        />
+                    </motion.div>
 
-                    <h1 ref={el => title = el}>
-                        Eduardo Nascimento
-                    </h1>
+                    <motion.h1 
+                        initial={{ y: 30, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1, transition: {
+                            duration: 1.2,
+                            type: 'tween',
+                            ease: "easeInOut"
+                        }}}
+                    >
+                        Eduardo nascimento
+                    </motion.h1>
+
                 </div>
 
-                <div className={ styles.about }>
+                <motion.div
+                className={ styles.about }
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, transition: {
+                    duration: 1,
+                    type: 'tween',
+                    ease: "easeInOut"
+                }}}
+                >
                     <p>
                         <b>Web designer,</b> morando em Curitiba/PR, graduado em Design Gráfico pela Unicuritiba.
                     </p>
@@ -66,46 +76,88 @@ export default function Header() {
                     <p>
                         Sou um entusiasta do desenvolvimento e dos avanços tecnológicos, hoje com foco em tecnologias que envolvem o <b>front-end</b>.
                     </p>
-                </div>
+                </motion.div>
 
 
-                <ul className={ styles.aboutList }>
-                    <li>
+                <motion.ul 
+                    className={ styles.aboutList }
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1, transition: {
+                        duration: 2,
+                        type: 'tween',
+                        ease: 'easeInOut'
+                    }}}
+                >
+                    <motion.li 
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={{ opacity: 1, y: 0, transition: {
+                            duration: 1,
+                            type: 'tween',
+                            ease: 'easeIn'
+                        }}}
+                    >
                         <Link href='/about' passHref>
                             <a>
                                 <FaUserTag />
                                 <span>Mais sobre mim</span>
                             </a>
                         </Link>
-                    </li>
-                    <li>
+                    </motion.li>
+
+                    <motion.li 
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={{ opacity: 1, y: 0, transition: {
+                            duration: 1,
+                            delay: .2,
+                            type: 'tween',
+                            ease: 'easeIn'
+                        }}}
+                    >
                         <Link href='/jobs' passHref>
                             <a>
                                 <FaBezierCurve />
                                 <span>Trabalhos/Projetos</span>
                             </a>
                         </Link>
-                    </li>
-                    <li>
+                    </motion.li>
+
+                    <motion.li 
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={{ opacity: 1, y: 0, transition: {
+                            duration: 1,
+                            delay: .4,
+                            type: 'tween',
+                            ease: 'easeIn'
+                        }}}
+                    >
                         <Link href='/experiences' passHref>
                             <a>
                                 <FaGraduationCap />
                                 <span>Experiência</span>
                             </a>
                         </Link>
-                    </li>
-                    <li>
+                    </motion.li>
+
+                    <motion.li 
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={{ opacity: 1, y: 0, transition: {
+                            duration: 1,
+                            delay: .6,
+                            type: 'tween',
+                            ease: 'easeIn'
+                        }}}
+                    >
                         <Link href='/contact' passHref>
                             <a>
                                 <FaGlobe />
                                 <span>Contato</span>
                             </a>
                         </Link>
-                    </li>
-                </ul>
+                    </motion.li>
+                </motion.ul>
 
                 <SocialContacts />
             </div>
-        </>
+        </motion.div>
     );
 };
