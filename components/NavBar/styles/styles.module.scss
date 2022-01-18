@@ -1,0 +1,36 @@
+.container {
+    max-width: 90%;
+    margin: 2rem auto;
+    border-bottom: 2px #f2f2f2 solid;
+    display: flex;
+    justify-content: center;
+
+    .navIconsContainer {
+        padding-bottom: 1rem;
+    }
+
+    svg {
+        color: #f2f2f2;
+        margin: 0 .7rem;
+        font-size: 1.8rem;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            color: rgb(2, 235, 138);
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .container {
+        max-width: 30%;
+
+        .navIconsContainer {
+            padding-bottom: 2rem;
+
+            svg {
+                margin: 0 1rem;
+            }
+        }
+    }
+}

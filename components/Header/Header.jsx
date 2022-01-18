@@ -1,23 +1,41 @@
 import Link from 'next/link';
 import Head from 'next/head';
 import React, { useRef, useEffect } from 'react';
-import gsap, { EasePack } from 'gsap';
+import gsap from 'gsap';
 
 import styles from './styles/style.module.scss';
 import { FaUserTag, FaBezierCurve, FaGraduationCap, FaGlobe, FaBehanceSquare, FaGithub } from "react-icons/fa";
+
+import SocialContacts from '../SocialContacts/SocialContacts';
 
 export default function Header() {
     //Animações com GSAP
     let app = useRef(null);
     let title = useRef(null);
+    let image = useRef(null);
 
     //Quando a página for carregada, as animações dão start
     useEffect(() => {
         //Animação do titulo
         const titleH1 = title;
+        gsap.from(titleH1, { opacity: 0, y: 30, ease: "power3.inOut", duration: 1.3 });
 
-        gsap.from(titleH1, { opacity: 0, y: 30, ease: "power3.inOut", duration: 1.2 });
+        //animação minha foto
+        const myImage = image;
+        gsap.from(myImage, 
+            { 
+                opacity: 0,
+                y: -35,
+                scale: 0.8,
+                ease: "power3.inOut",
+                duration: 1
+            });
+
+        //Animação de entrada da página
         gsap.from(app, { opacity: 0, ease: "power3.inOut", duration: 1 });
+
+        //quando a página for carregada pela primeira vez, não haverá um "flash" sem animação antes da animação acontecer
+        gsap.set(app, {autoAlpha: 1});
     });
 
     return (
@@ -27,7 +45,13 @@ export default function Header() {
             </Head>
             <div className={styles.headerContainer} ref={el => app = el}>
                 <div className={ styles.headTextAndImg }>
-                    <img src='/me.png' alt="Eduardo Nascimento" width={ 120 } height={ 120 } />
+                    <img 
+                        src='/me.png' 
+                        alt="Eduardo Nascimento" 
+                        width={ 120 } 
+                        height={ 120 } 
+                        ref={el => image = el} 
+                    />
 
                     <h1 ref={el => title = el}>
                         Eduardo Nascimento
@@ -80,19 +104,7 @@ export default function Header() {
                     </li>
                 </ul>
 
-                <div className={ styles.socialContact }>
-                    <span>
-                        <Link href='https://www.behance.net/eduardosgndfc0'>
-                            <a><FaBehanceSquare /></a>
-                        </Link>
-                    </span>
-
-                    <span>
-                        <Link href='https://github.com/eduardosgn'>
-                            <a><FaGithub /></a>
-                        </Link>
-                    </span>
-                </div>
+                <SocialContacts />
             </div>
         </>
     );

@@ -16,6 +16,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #f0f0f0;
 }
 
+b, strong {
+  color: rgb(2, 235, 138);
+}
+
 p, a, span, li {
   font-family: 'Roboto', sans-serif;
   color: #f0f0f0;

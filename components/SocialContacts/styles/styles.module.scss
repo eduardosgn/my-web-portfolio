@@ -1,0 +1,33 @@
+.socialContact {
+    margin: 1.8rem auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    border-top: 2px solid #f2f2f2;
+
+    a {
+        color: #f2f2f2;
+        font-size: 2.5rem;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            color: rgb(2, 235, 138);
+        }
+
+        &:first-child {
+            margin-left: 2rem;
+        }
+
+        &:last-child {
+            margin-right: 2rem;
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .socialContact {
+        margin: 4rem auto 1.8rem auto;
+        max-width: 70%;
+    }
+}

@@ -1,7 +1,11 @@
+import NavBar from '../components/NavBar/NavBar';
+import AboutMe from '../components/AboutMe/AboutMe';
+
 export default function About() {
     return (
         <>
-            <h1>Sobre mim</h1>
+            <NavBar />
+            <AboutMe />
         </>
     );
 };
