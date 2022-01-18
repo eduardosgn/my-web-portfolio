@@ -3,16 +3,11 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import styles from './styles/style.module.scss';
-import { FaUserTag, FaBezierCurve, FaGraduationCap, FaGlobe, FaBehanceSquare, FaGithub } from "react-icons/fa";
+import { FaUserTag, FaBezierCurve, FaGraduationCap, FaGlobe } from "react-icons/fa";
 
 import SocialContacts from '../SocialContacts/SocialContacts';
 
 const easing = [.6, -.05, .01, 0.99];
-
-const hotlinks = {
-    initial: { opacity: 1, y: 0 },
-    animate: { opacity: 0, y: 30 }
-};
 
 export default function Header() {    
     return (
