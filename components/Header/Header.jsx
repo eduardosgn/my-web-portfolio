@@ -14,12 +14,11 @@ export default function Header() {
         //Framer-motion animações
         <motion.div
             //define o estado inicial da animação
-            initial={{ opacity: 0, x: -100 }}
+            initial={{ opacity: 0, x: -50 }}
             //define animação final
             animate={{ opacity: 1, x: 0, transition: {
-                duration: 1.5
+                duration: 1
             }}}
-            exit={{ opacity: 0, x: 100, transition:{ duration: 1.5 } }}
         >
             <Head>
                 <title>Portfólio | Eduardo Nascimento</title>
@@ -32,6 +31,7 @@ export default function Header() {
                             duration: 1,
                             ease: easing
                         }}}
+                        exit={{ opacity: 0, y: -30, scale: .8, transition: { duration: 1 } }}
                     >
                         <img 
                             src='/me.png' 
@@ -48,6 +48,7 @@ export default function Header() {
                             type: 'tween',
                             ease: "easeInOut"
                         }}}
+                        exit={{ opacity: 0, x: 100, transition: { duration: .8 } }}
                     >
                         Eduardo nascimento
                     </motion.h1>
@@ -62,6 +63,7 @@ export default function Header() {
                     type: 'tween',
                     ease: "easeInOut"
                 }}}
+                exit={{ opacity: 0, x: 60, transition: { duration: 1 } }}
                 >
                     <p>
                         <b>Web designer,</b> morando em Curitiba/PR, graduado em Design Gráfico pela Unicuritiba.
@@ -90,6 +92,7 @@ export default function Header() {
                             type: 'tween',
                             ease: 'easeIn'
                         }}}
+                        exit={{ opacity: 0, y: 8, transition: { delay: .05, } }}
                     >
                         <Link href='/about' passHref>
                             <a>
@@ -107,6 +110,7 @@ export default function Header() {
                             type: 'tween',
                             ease: 'easeIn'
                         }}}
+                        exit={{ opacity: 0, y: 8, transition: { delay: .07 } }}
                     >
                         <Link href='/jobs' passHref>
                             <a>
@@ -124,6 +128,7 @@ export default function Header() {
                             type: 'tween',
                             ease: 'easeIn'
                         }}}
+                        exit={{ opacity: 0, y: 8, transition: { delay: .09 } }}
                     >
                         <Link href='/experiences' passHref>
                             <a>
@@ -141,6 +146,7 @@ export default function Header() {
                             type: 'tween',
                             ease: 'easeIn'
                         }}}
+                        exit={{ opacity: 0, y: 8, transition: { delay: .1 } }}
                     >
                         <Link href='/contact' passHref>
                             <a>
