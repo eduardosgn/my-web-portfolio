@@ -6,11 +6,11 @@ export default function About() {
     return (
         <motion.div
             //define o estado inicial da animação
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0, x: -100 }}
             //define animação final
-            animate={{ opacity: 1 }}
-            //Quando sai da página a animação é feita
-            exit={{ opacity: 0 }}
+            animate={{ opacity: 1, x: 0, transition: {
+                duration: 1
+            }}}
         >
             <NavBar />
             <AboutMe />

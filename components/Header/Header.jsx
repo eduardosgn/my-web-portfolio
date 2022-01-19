@@ -17,10 +17,9 @@ export default function Header() {
             initial={{ opacity: 0, x: -100 }}
             //define animação final
             animate={{ opacity: 1, x: 0, transition: {
-                duration: .8
+                duration: 1.5
             }}}
-            //Quando sai da página a animação é feita
-            exit={{ opacity: 0, x: 100 }}
+            exit={{ opacity: 0, x: 100, transition:{ duration: 1.5 } }}
         >
             <Head>
                 <title>Portfólio | Eduardo Nascimento</title>
@@ -84,9 +83,10 @@ export default function Header() {
                     }}}
                 >
                     <motion.li 
-                        initial={{ opacity: 0, y: 15 }}
+                        initial={{ opacity: 0, y: 8 }}
                         animate={{ opacity: 1, y: 0, transition: {
                             duration: 1,
+                            delay: .05,
                             type: 'tween',
                             ease: 'easeIn'
                         }}}
@@ -100,10 +100,10 @@ export default function Header() {
                     </motion.li>
 
                     <motion.li 
-                        initial={{ opacity: 0, y: 15 }}
+                        initial={{ opacity: 0, y: 8 }}
                         animate={{ opacity: 1, y: 0, transition: {
                             duration: 1,
-                            delay: .2,
+                            delay: .07,
                             type: 'tween',
                             ease: 'easeIn'
                         }}}
@@ -117,10 +117,10 @@ export default function Header() {
                     </motion.li>
 
                     <motion.li 
-                        initial={{ opacity: 0, y: 15 }}
+                        initial={{ opacity: 0, y: 8 }}
                         animate={{ opacity: 1, y: 0, transition: {
                             duration: 1,
-                            delay: .4,
+                            delay: .09,
                             type: 'tween',
                             ease: 'easeIn'
                         }}}
@@ -134,10 +134,10 @@ export default function Header() {
                     </motion.li>
 
                     <motion.li 
-                        initial={{ opacity: 0, y: 15 }}
+                        initial={{ opacity: 0, y: 8 }}
                         animate={{ opacity: 1, y: 0, transition: {
                             duration: 1,
-                            delay: .6,
+                            delay: .1,
                             type: 'tween',
                             ease: 'easeIn'
                         }}}
