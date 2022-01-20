@@ -1,3 +1,9 @@
+import Head from 'next/head';
+
+import NavBar from '../components/NavBar/NavBar';
+import Contacts from '../components/Contacts/Contacts';
+import SocialContacts from '../components/SocialContacts/SocialContacts';
+
 import { motion } from "framer-motion";
 
 export default function Contact() {
@@ -10,9 +16,12 @@ export default function Contact() {
             //Quando sai da página a animação é feita
             exit={{ opacity: 0 }}
         >
-            <h1>
-                Contato
-            </h1>
+            <Head>
+                <title>Contato | Eduardo Nascimento</title>
+            </Head>
+            <NavBar />
+            <Contacts />
+            <SocialContacts />
         </motion.div>
     );
 };
