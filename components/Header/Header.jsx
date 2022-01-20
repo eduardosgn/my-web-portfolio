@@ -17,7 +17,7 @@ export default function Header() {
             initial={{ opacity: 0, x: -50 }}
             //define animação final
             animate={{ opacity: 1, x: 0, transition: {
-                duration: 1
+                duration: .6
             }}}
         >
             <Head>
@@ -92,7 +92,7 @@ export default function Header() {
                             type: 'tween',
                             ease: 'easeIn'
                         }}}
-                        exit={{ opacity: 0, y: 8, transition: { delay: .05, } }}
+                        exit={{ opacity: 0, y: 8, transition: { delay: .02, } }}
                     >
                         <Link href='/about' passHref>
                             <a>
@@ -110,7 +110,7 @@ export default function Header() {
                             type: 'tween',
                             ease: 'easeIn'
                         }}}
-                        exit={{ opacity: 0, y: 8, transition: { delay: .07 } }}
+                        exit={{ opacity: 0, y: 8, transition: { delay: .04 } }}
                     >
                         <Link href='/jobs' passHref>
                             <a>
@@ -128,7 +128,7 @@ export default function Header() {
                             type: 'tween',
                             ease: 'easeIn'
                         }}}
-                        exit={{ opacity: 0, y: 8, transition: { delay: .09 } }}
+                        exit={{ opacity: 0, y: 8, transition: { delay: .06 } }}
                     >
                         <Link href='/experiences' passHref>
                             <a>
@@ -146,7 +146,7 @@ export default function Header() {
                             type: 'tween',
                             ease: 'easeIn'
                         }}}
-                        exit={{ opacity: 0, y: 8, transition: { delay: .1 } }}
+                        exit={{ opacity: 0, y: 8, transition: { delay: .08 } }}
                     >
                         <Link href='/contact' passHref>
                             <a>

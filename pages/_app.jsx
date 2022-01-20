@@ -8,17 +8,17 @@ function MyApp({ Component, pageProps, router }) {
       <motion.div key={router.route} initial='pageInitial' animate='pageAnimate' exit='pageExit' variants={{
         pageInitial: {
           opacity: 0,
-          x: -50
         },
         pageAnimate: {
           opacity: 1,
-          x: 0
+          transition: {
+            duration: .6
+          }
         },
         pageExit: {
           opacity: 0,
-          x: 50,
           transition: {
-            duration: 1
+            duration: .4
           }
         },
       }}>
@@ -29,22 +29,3 @@ function MyApp({ Component, pageProps, router }) {
 };
 
 export default MyApp;
-
-// import React from 'react';
-// import App from 'next/app';
-// import { AnimatePresence } from 'framer-motion';
-// import '../styles/globals.css';
-
-// class MyApp extends App {
-//   render() {
-//     const { Component, pageProps, router } = this.props;
-
-//     return (
-//       <AnimatePresence exitBeforeEnter>
-//         <Component { ...pageProps } key={router.route} />
-//       </AnimatePresence>
-//     );
-//   };
-// };
-
-// export default MyApp;

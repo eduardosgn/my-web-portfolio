@@ -1,0 +1,129 @@
+.container {
+    margin: 0 auto;
+    max-width: 90%;
+    display: grid;
+
+    #educationListPadding {
+        padding-bottom: 3rem;
+    }
+
+    .education, .professional, .courses {
+        h1 {
+            margin-top: 1rem;
+            font-size: 3rem;
+            text-align: left;
+            padding: 0 2.5rem;
+        }
+    }
+
+    .professionalList,
+    .educationList {
+        border-bottom: 2px #f2f2f2 solid;
+    }
+
+    .professionalList, 
+    .educationList,
+    .coursesList {
+        list-style: none;
+        text-align: left;
+        padding: 0 2.5rem 2.5rem 2.5rem;
+            
+        li {
+            margin-top: 2.5rem;
+
+            #date {
+                color: rgb(2, 235, 138);
+                margin-bottom: .5rem;
+            }
+
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                span {
+                    color: rgb(2, 235, 138);
+                    margin-right: .2rem;
+                    font-size: 1.2rem;
+                    padding-top: .3rem;
+                }
+            }
+
+            #profesionalText {
+                line-height: 1.5;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                margin: .5rem 0 0 0;
+            }
+            
+            h2 {
+                font-size: 1.2rem;
+                margin: 0;
+            }
+            
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .container {
+        max-width: 50%;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: repeat(2, 43%);
+        gap: 2rem;
+
+        grid-template-areas: 
+            'p e'
+            'p c'
+        ;
+
+        .professional {
+            grid-area: p;
+        }
+
+        .education {
+            grid-area: e;
+        }
+
+        .courses {
+            grid-area: c;
+        }
+
+        #educationListPadding {
+            padding-bottom: 0;
+        }
+
+        .education,
+        .professional,
+        .courses {
+            h1 {
+                margin-top: 1rem;
+                text-align: left;
+                font-size: 4rem;
+                padding: 0;
+            }
+        }
+
+        .courses {
+            h1 {
+                margin-top: .5rem;
+            }
+        }
+
+        .professionalList, 
+        .educationList,
+        .coursesList {
+            padding: 0;
+            border: none;
+
+            li {
+                div {
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+}

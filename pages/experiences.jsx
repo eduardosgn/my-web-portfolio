@@ -1,6 +1,12 @@
+import Head from 'next/head';
+
+import NavBar from '../components/NavBar/NavBar';
+import SocialContacts from '../components/SocialContacts/SocialContacts';
+import Exp from '../components/Exp/Exp';
+
 import { motion } from "framer-motion";
 
-export default function Exp() {
+export default function Experiences() {
     return (
         <motion.div
             initial={{ opacity: 0, x: -100 }}
@@ -8,9 +14,12 @@ export default function Exp() {
                 duration: 1
             }}}
         >
-            <h1>
-                Experiências
-            </h1>
+            <Head>
+                <title>Experiências | Eduardo Nascimento</title>
+            </Head>
+            <NavBar />
+            <Exp />
+            <SocialContacts />
         </motion.div>
     );
 };

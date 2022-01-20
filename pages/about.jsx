@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 import NavBar from '../components/NavBar/NavBar';
 import AboutMe from '../components/AboutMe/AboutMe';
 import { motion } from 'framer-motion';
@@ -12,6 +14,9 @@ export default function About() {
                 duration: 1
             }}}
         >
+            <Head>
+                <title>Sobre mim | Eduardo Nascimento</title>
+            </Head>
             <NavBar />
             <AboutMe />
         </motion.div>
