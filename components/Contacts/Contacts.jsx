@@ -41,7 +41,7 @@ function Contacts() {
                     Entre em contato<b>!</b>
                 </motion.h1>
 
-                <motion.h2
+                <motion.p
                     initital='subtitleInit'
                     animate='subtitleAnim'
                     exit='subtitleExit'
@@ -52,7 +52,12 @@ function Contacts() {
                         },
                         subtitleAnim: {
                             opacity: 1,
-                            y: 0
+                            y: 0,
+                            transition: {
+                                duration: 1,
+                                type: 'tween',
+                                ease: 'easeInOut'
+                            }
                         },
                         subtitleExit: {
                             opacity: 0,
@@ -65,8 +70,27 @@ function Contacts() {
                         }
                     }}
                 >
-                    Saiba como falar comigo pelos canais abaixo.
-                </motion.h2>
+                    Saiba como falar comigo pelos canais abaixo, ou preencha o formulário e escreva uma mensagem, entrarei em contato contigo <b>em breve!</b>
+                </motion.p>
+
+                <div className={ styles.formContainer }>
+                    <form name="contact" method="POST" data-netlify="true">
+                        <input type="hidden" name="form-name" value="contact" />
+                        <p>
+                            <label>Seu nome: <input type="text" name="name" autoFocus /></label>   
+                        </p>
+                        <p>
+                            <label>Seu e-mail: <input type="email" name="email" /></label>
+                        </p>
+                        <p>
+                            <label>Mensagem: <textarea name="message"></textarea></label>
+                        </p>
+                        <p>
+                            <button type="submit">Enviar</button>
+                        </p>
+                    </form>
+                </div>
+
                 
                 <motion.ul>
                     <motion.li
