@@ -76,18 +76,20 @@ function Contacts() {
                 <div className={ styles.formContainer }>
                     <form name="contact" method="POST" data-netlify="true">
                         <input type="hidden" name="form-name" value="contact" />
-                        <p>
-                            <label>Seu nome: <input type="text" name="name" autoFocus /></label>   
-                        </p>
-                        <p>
-                            <label>Seu e-mail: <input type="email" name="email" /></label>
-                        </p>
-                        <p>
-                            <label>Mensagem: <textarea name="message"></textarea></label>
-                        </p>
-                        <p>
-                            <button type="submit">Enviar</button>
-                        </p>
+                        <div className={ styles.formLabels }>
+                            <p id={ styles.name }>
+                                <label>Seu nome: <input type="text" name="name" autoFocus /></label>   
+                            </p>
+                            <p id={ styles.email }>
+                                <label>Seu e-mail: <input type="email" name="email" /></label>
+                            </p>
+                            <p id={ styles.message }>
+                                <label>Mensagem: <textarea name="message"></textarea></label>
+                            </p>
+                            <p id={ styles.submitBtn }>
+                                <button type="submit" id={ styles.btn }>Enviar</button>
+                            </p>
+                        </div>
                     </form>
                 </div>
 
@@ -156,38 +158,6 @@ function Contacts() {
                         }}
                     >
                         <span><MdEmail /></span> <p><b>eduardosgn19@gmail.com</b></p>
-                    </motion.li>
-                    <motion.li
-                        initital='liInit'
-                        animate='liAnim'
-                        exit='liExit'
-                        variants={{
-                            liInit: {
-                                opacity: 0,
-                                scale: 1.2
-                            },
-                            liAnim: {
-                                opacity: 1,
-                                scale: 1,
-                                transition: {
-                                    delay: 1,
-                                    duration: 1,
-                                    type: 'tween',
-                                    ease: 'easeInOut'
-                                }
-                            },
-                            liExit: {
-                                opacity: 0,
-                                y: -30,
-                                transition: {
-                                    duration: .9,
-                                    type: 'tween',
-                                    ease: 'easeInOut'
-                                }
-                            }
-                        }}
-                    >
-                        <span><RiInstagramFill /></span> <p><b>___edusgn</b></p>
                     </motion.li>
                 </motion.ul>
 

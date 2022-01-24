@@ -1,6 +1,6 @@
 .container {
-    margin: 0 auto;
     max-width: 90%;
+    margin: 3rem auto;
 
     h1 {
         font-size: 3rem;
@@ -18,7 +18,55 @@
     }
 
     .formContainer {
-        background: #4e4e4e;
+        margin-top: 2rem;
+
+        .formLabels {
+            display: flex;
+            flex-direction: column;
+
+            #name,
+            #email,
+            #message {
+                width: 100%;
+
+                input, 
+                textarea {
+                    display: block;
+                    padding: .5rem 1rem;
+                    margin-top: .5rem;
+                    font-size: 1rem;
+                    width: 100%;
+                    border-radius: 5px;
+                    outline: 2px #f2f2f2 solid;
+                    background: none;
+                    color: #f2f2f2;
+
+                    &:focus {
+                        outline: 2px rgb(2, 235, 138) solid;
+                    }
+                }
+            }
+
+            #submitBtn {
+                #btn {
+                    background: none;
+                    border: 2px #f2f2f2 solid;
+                    color: #f2f2f2;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    padding: .8rem 4rem;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    transition: all .2s ease-in-out;
+
+                    &:hover {
+                        border: 2px rgb(2, 235, 138) solid;
+                        background: rgb(2, 235, 138);
+                        color: #4e4e4e;
+                    }
+                }  
+            }
+        }
     }
 
     ul {
@@ -48,10 +96,48 @@
 @media screen and (min-width: 900px) {
     .container {
         max-width: 40%;
-        margin: 5rem auto 7rem auto;
+        margin: 2.5rem auto 4rem auto;
 
         h1 {
             font-size: 4rem;
+        }
+
+        .formContainer {
+            width: 80%;
+            margin: 3rem auto 0 auto;
+    
+            .formLabels {
+                display: grid;
+                gap: 1.5rem;
+                grid-template-columns: repeat(auto-fit, 1fr);
+                // grid-template-rows: repeat(3, 1fr);
+    
+                grid-template-areas:
+                    'n e'
+                    'm m'
+                    'b b'
+                ;
+            }
+    
+            #name, #email, #message, #submitBtn {
+                margin: 0;
+            }
+    
+            #name {
+                grid-area: n;
+            }
+    
+            #email {
+                grid-area: e;
+            }
+    
+            #message {
+                grid-area: m;
+            }
+    
+            #submitBtn {
+                grid-area: b;
+            }
         }
 
         ul {
