@@ -1,6 +1,6 @@
 import styles from './styles/styles.module.scss';
 
-import { RiWhatsappFill, RiInstagramFill } from 'react-icons/ri';
+import { RiWhatsappFill } from 'react-icons/ri';
 import { MdEmail } from 'react-icons/md';
 
 import { motion } from 'framer-motion';

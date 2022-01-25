@@ -49,7 +49,7 @@ export default function AboutMe() {
                 </p>
 
                 <p>
-                    Tenho facilidade com o idioma <b>inglês (avançado),</b> feito cursos do idioma no Interamericano (3 anos) e na Wizard (2 anos) e atualmente estou conhecendo e aprendendo o idioma <b>alemão (nível básico).</b>
+                    Tenho facilidade com o idioma <b>inglês <i>(avançado),</i></b> feito cursos do idioma no Interamericano <i>(3 anos)</i> e na Wizard <i>(2 anos)</i> e atualmente estou conhecendo e aprendendo o idioma <b>alemão <i>(nível básico).</i></b>
                 </p>
             </div>
 

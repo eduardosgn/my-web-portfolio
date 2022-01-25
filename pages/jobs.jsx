@@ -1,3 +1,7 @@
+import Projects from '../components/Projects/Projects';
+import NavBar from '../components/NavBar/NavBar';
+import SocialContacts from '../components/SocialContacts/SocialContacts';
+
 import { motion } from "framer-motion";
 
 export default function Jobs() {
@@ -10,7 +14,9 @@ export default function Jobs() {
             //Quando sai da página a animação é feita
             exit={{ opacity: 0 }}
         >
-            <h1>Trabalhos/Projetos</h1>
+            <NavBar />
+            <Projects />
+            <SocialContacts />
         </motion.div>
     );
 };
