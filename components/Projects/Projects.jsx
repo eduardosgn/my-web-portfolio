@@ -18,15 +18,70 @@ export default function Projects() {
             <div id={ styles.separator }></div>
 
             <div className={ styles.projectsContainer }>
-                <div id={ styles.huddle } className={ styles.huddleWrapper }>
-                    <Link href="https://huddle-landing-page-scss.netlify.app/">
+                <div id={ styles.projectWrapper } className={ styles.orderSummaryWrapper }>
+                    <Link href="https://order-checkout-project.netlify.app/">
                         <a target='_blank'>
                             <div id={ styles.projectHover }>
-                                <p><b>Ver a página</b></p>
+                                <p>Ver página</p>
                             </div>
                         </a>
                     </Link>
-                    <p>Huddle landing page</p>
+                    <p id={ styles.projectTitle }>Order summary card</p>
+                </div>
+
+                <div id={ styles.projectWrapper } className={ styles.huddleWrapper }>
+                    <Link href="https://huddle-landing-page-scss.netlify.app/">
+                        <a target='_blank'>
+                            <div id={ styles.projectHover }>
+                                <p>Ver página</p>
+                            </div>
+                        </a>
+                    </Link>
+                    <p id={ styles.projectTitle }>Huddle landing page</p>
+                </div>
+
+                <div id={ styles.projectWrapper } className={ styles.statsCardWrapper }>
+                    <Link href="https://stats-card-component-project.netlify.app/">
+                        <a target='_blank'>
+                            <div id={ styles.projectHover }>
+                                <p>Ver página</p>
+                            </div>
+                        </a>
+                    </Link>
+                    <p id={ styles.projectTitle }>Stats card</p>
+                </div>
+
+                <div id={ styles.projectWrapper } className={ styles.travellyWrapper }>
+                    <Link href="https://travelly-portfolio-website.netlify.app/">
+                        <a target='_blank'>
+                            <div id={ styles.projectHover }>
+                                <p>Ver página</p>
+                            </div>
+                        </a>
+                    </Link>
+                    <p id={ styles.projectTitle }>Travelly Website</p>
+                </div>
+
+                <div id={ styles.projectWrapper } className={ styles.elenaWrapper }>
+                    <Link href="https://elena-joy-portfolio-website.netlify.app/">
+                        <a target='_blank'>
+                            <div id={ styles.projectHover }>
+                                <p>Ver página</p>
+                            </div>
+                        </a>
+                    </Link>
+                    <p id={ styles.projectTitle }>Elena Joy Website</p>
+                </div>
+
+                <div id={ styles.projectWrapper } className={ styles.sunnysideWrapper }>
+                    <Link href="https://sunnyside-portfolio.netlify.app/">
+                        <a target='_blank'>
+                            <div id={ styles.projectHover }>
+                                <p>Ver página</p>
+                            </div>
+                        </a>
+                    </Link>
+                    <p id={ styles.projectTitle }>Sunnyside Website</p>
                 </div>
             </div>
         </motion.div>
