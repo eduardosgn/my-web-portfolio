@@ -1,0 +1,93 @@
+.projectsContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 3rem;
+
+    .githubReposWrapper {
+        background: url(/githubreposbg.jpg);
+    }
+
+    .orderSummaryWrapper {
+        background: url(/ordersummarybg.png);
+    }
+
+    .insureWrapper {
+        background: url(/insurebg.jpg);
+    }
+
+    .travellyWrapper {
+        background: url(/travellybg.png);
+    }
+
+    .elenaWrapper {
+        background: url(/elenabg.png);
+    }
+
+    .pingWrapper {
+        background: url(/pingbg.jpg);
+    }
+
+    .liderWrapper {
+        background: url(/lideresbg.jpg);
+    }
+
+    .psicanaliseWrapper {
+        background: url(/psibg.jpg);
+    }
+
+    .trilhaElosWrapper {
+        background: url(/trilhaelosbg.jpg);
+    }
+
+    #projectWrapper {
+        border-radius: 5px;
+        border: 2px #f2f2f2 solid;
+        padding: 1.5rem 0;
+        position: relative;
+        overflow: hidden;
+
+        #projectTitle,
+        #githubSubtext,
+        #githubTitle {
+            text-shadow: -2px 2px 1px #141414;
+        }
+
+        #githubTitle {
+            margin: 0.8rem 0 0 0;
+        }
+
+        #githubSubtext {
+            font-size: 13px;
+            margin: 0;
+        }
+        
+        #projectHover {
+            position: absolute;
+            top: 0;
+            background: rgb(2, 235, 138);
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: all .2s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                color: rgb(34, 34, 34);
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .projectsContainer {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}

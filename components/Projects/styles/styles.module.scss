@@ -18,70 +18,6 @@
         width: 20%;
         border-top: 2px rgb(2, 235, 138) solid;
     }
-
-    .projectsContainer {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        margin-top: 3rem;
-
-        .huddleWrapper {
-            background: url(/huddlebg.png);
-        }
-
-        .orderSummaryWrapper {
-            background: url(/ordersummarybg.png);
-        }
-
-        .statsCardWrapper {
-            background: url(/statscardbg.png);
-        }
-
-        .travellyWrapper {
-            background: url(/travellybg.png);
-        }
-
-        .elenaWrapper {
-            background: url(/elenabg.png);
-        }
-
-        .sunnysideWrapper {
-            background: url(/sunnysidebg.png);
-        }
-
-        #projectWrapper {
-            border-radius: 5px;
-            border: 2px #f2f2f2 solid;
-            padding: 1.5rem 0;
-            position: relative;
-            overflow: hidden;
-
-            #projectTitle {
-                text-shadow: -2px 2px 2px #292929;
-            }
-            
-            #projectHover {
-                position: absolute;
-                top: 0;
-                background: rgb(2, 235, 138);
-                width: 100%;
-                height: 100%;
-                opacity: 0;
-                transition: all .2s ease-in-out;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                p {
-                    color: rgb(34, 34, 34);
-                }
-
-                &:hover {
-                    opacity: 1;
-                }
-            }
-        }
-    }
 }
 
 @media screen and (min-width: 900px) {
@@ -94,11 +30,6 @@
 
         #separator {
             width: 15%;
-        }
-
-        .projectsContainer {
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 1fr);
         }
     }
 }
