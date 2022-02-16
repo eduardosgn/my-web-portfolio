@@ -19,6 +19,7 @@ export default function Header() {
             animate={{ opacity: 1, x: 0, transition: {
                 duration: .6
             }}}
+            exit={{ opacity: 0 }}
         >
             <Head>
                 <title>Portfólio | Eduardo Nascimento</title>
