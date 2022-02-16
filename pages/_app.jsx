@@ -5,7 +5,7 @@ import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
 
 function MyApp({ Component, pageProps, router }) {
   return (
-    <AnimateSharedLayout>
+    <AnimateSharedLayout type="crossfade">
       <AnimatePresence exitBeforeEnter>
         <Head>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
