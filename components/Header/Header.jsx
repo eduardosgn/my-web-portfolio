@@ -51,7 +51,7 @@ export default function Header() {
                         }}}
                         exit={{ opacity: 0, x: 100, transition: { duration: .8 } }}
                     >
-                        Eduardo nascimento
+                        Eduardo Nascimento
                     </motion.h1>
                 </div>
 
@@ -156,7 +156,7 @@ export default function Header() {
                     </p>
                 </motion.div>
 
-                <p>Confira nos links abaixo o meu <b>Behance</b> e <b>Github!</b></p>
+                <p id={ styles.socialText }>Confira nos links abaixo o meu <b>Behance</b> e <b>Github!</b></p>
 
                 <SocialContacts />
             </div>
