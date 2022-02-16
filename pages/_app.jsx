@@ -24,10 +24,7 @@ function MyApp({ Component, pageProps, router }) {
             }
           },
           pageExit: {
-            opacity: 0,
-            transition: {
-              duration: .4
-            }
+            opacity: 0
           },
         }}>
           <Component {...pageProps} />
