@@ -29,15 +29,15 @@ export default function NavBar() {
                             </a>
                         </Link>
 
-                        <Link href="/jobs" passHref>
-                            <a>
-                                <FaBezierCurve />
-                            </a>
-                        </Link>
-
                         <Link href="/experiences" passHref>
                             <a>
                                 <FaGraduationCap />
+                            </a>
+                        </Link>
+
+                        <Link href="/jobs" passHref>
+                            <a>
+                                <FaBezierCurve />
                             </a>
                         </Link>
 

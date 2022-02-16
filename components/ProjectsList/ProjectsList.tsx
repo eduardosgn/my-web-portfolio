@@ -15,18 +15,18 @@ export default function ProjectsList() {
                                 </div>
                             </a>
                         </Link>
-                        <p id={ styles.projectTitle }>Liderança do Futuro</p>
+                        <p id={ styles.projectTitle }>Liderança do Futuro | IEDT</p>
                     </div>
 
-                    <div id={ styles.projectWrapper } className={ styles.psicanaliseWrapper }>
-                        <Link href="https://www.posead.unifemm.edu.br/pre-lancamento-pos-graduacao-em-psicanalise-teoria-clinica-extensao-unifemm/">
+                    <div id={ styles.projectWrapper } className={ styles.edunextWrapper }>
+                        <Link href="https://web.edunext.com.br/portal-edunext/">
                             <a target='_blank'>
                                 <div id={ styles.projectHover }>
                                     <p>Ver página</p>
                                 </div>
                             </a>
                         </Link>
-                        <p id={ styles.projectTitle }>Pós em Psicanálise | UNIFEMM</p>
+                        <p id={ styles.projectTitle }>Edunext | IEDT</p>
                     </div>
 
                     <div id={ styles.projectWrapper } className={ styles.trilhaElosWrapper }>

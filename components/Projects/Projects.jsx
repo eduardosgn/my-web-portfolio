@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 export default function Projects() {
     return (
         <motion.div className={ styles.container }>
-            <h1>Trabalhos e projetos</h1>
+            <h1>Criações</h1>
 
             <div id={ styles.separator }></div>
 

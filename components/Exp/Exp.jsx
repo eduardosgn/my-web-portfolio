@@ -55,7 +55,7 @@ export default function Experiences() {
                                 <span><FaChevronRight /></span><h2>Renault do Brasil - Jovem Aprendiz</h2>
                             </div>
                             <p id={ styles.profesionalText }>
-                                Elaboração, atualização e alteração de fichas de operação de processos (FOP) utilizando softwares como Visview e MS Excel. Acompanhamento da linha de produção, desenvolvimento de melhorias na automação da linha de carrocerias dos carros de passeio Renault.
+                                Elaboração, atualização e alteração de fichas de operação de processos (FOP) utilizando softwares como Visview, AutoCAD e MS Excel. Acompanhamento da linha de produção, desenvolvimento de melhorias na automação da linha de carrocerias dos carros de passeio Renault.
                             </p>
                         </li>
 
