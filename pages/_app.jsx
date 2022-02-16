@@ -26,8 +26,10 @@ import { useTransitionFix } from '../utils/useTransitionFix.ts';
 // Router.events.on("routeChangeStart", routeChange );
 
 function MyApp({ Component, pageProps, router }) {
+  const transitionCallback = useTransitionFix()
+
   return (
-    <AnimatePresence exitBeforeEnter onExitComplete={ useTransitionFix }>
+    <AnimatePresence exitBeforeEnter onExitComplete={ transitionCallback }>
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
