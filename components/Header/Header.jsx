@@ -53,28 +53,7 @@ export default function Header() {
                     >
                         Eduardo nascimento
                     </motion.h1>
-
                 </div>
-
-                <motion.div
-                className={ styles.about }
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1, transition: {
-                    duration: 1,
-                    type: 'tween',
-                    ease: "easeInOut"
-                }}}
-                exit={{ opacity: 0, x: 60, transition: { duration: 1 } }}
-                >
-                    <p>
-                        <b>Web designer,</b> morando em Curitiba/PR, graduado em Design Gráfico pela Unicuritiba.
-                    </p>
-
-                    <p>
-                        Sou um entusiasta do desenvolvimento e dos avanços tecnológicos, hoje com foco em tecnologias que envolvem o <b>front-end</b>.
-                    </p>
-                </motion.div>
-
 
                 <motion.ul 
                     className={ styles.aboutList }
@@ -157,6 +136,27 @@ export default function Header() {
                         </Link>
                     </motion.li>
                 </motion.ul>
+
+                <motion.div
+                className={ styles.about }
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, transition: {
+                    duration: 1,
+                    type: 'tween',
+                    ease: "easeInOut"
+                }}}
+                exit={{ opacity: 0, x: 60, transition: { duration: 1 } }}
+                >
+                    <p>
+                        <b>Web designer,</b> morando em Curitiba/PR, graduado em Design Gráfico pela Unicuritiba.
+                    </p>
+
+                    <p>
+                        Sou um entusiasta do desenvolvimento e dos avanços tecnológicos, hoje com foco em tecnologias que envolvem o <b>front-end</b>.
+                    </p>
+                </motion.div>
+
+                <p>Confira nos links abaixo o meu <b>Behance</b> e <b>Github!</b></p>
 
                 <SocialContacts />
             </div>
