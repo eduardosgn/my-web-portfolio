@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps, router }) {
             opacity: 0
           },
         }}>
-          <Component {...pageProps} />
+          <Component {...pageProps} key={router.pathname} />
         </motion.div>
       </AnimatePresence>
     </AnimateSharedLayout>
