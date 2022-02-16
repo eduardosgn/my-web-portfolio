@@ -18,31 +18,31 @@ export default function NavBar() {
                 <div className={ styles.container }>
                     <div className={ styles.navIconsContainer }>
                         <Link href="/" passHref>
-                            <a>
+                            <a title='Página inicial'>
                                 <FaHouseUser />
                             </a>
                         </Link>
 
                         <Link href="/about" passHref>
-                            <a>
+                            <a title='Mais sobre mim!'>
                                 <FaUserTag />
                             </a>
                         </Link>
 
                         <Link href="/experiences" passHref>
-                            <a>
+                            <a title='Cursos e Graduações'>
                                 <FaGraduationCap />
                             </a>
                         </Link>
 
                         <Link href="/jobs" passHref>
-                            <a>
+                            <a title='Trabalhos e Projetos'>
                                 <FaBezierCurve />
                             </a>
                         </Link>
 
                         <Link href="/contact" passHref>
-                            <a>
+                            <a title='Contato'>
                                 <FaGlobe />
                             </a>
                         </Link>
