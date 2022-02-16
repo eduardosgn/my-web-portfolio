@@ -1,11 +1,11 @@
 import Head from 'next/head';
 
 import '../styles/globals.css';
-import { AnimatePresence, LayoutGroup, motion } from 'framer-motion';
+import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
 
 function MyApp({ Component, pageProps, router }) {
   return (
-    <LayoutGroup>
+    <AnimateSharedLayout>
       <AnimatePresence exitBeforeEnter>
         <Head>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps, router }) {
           <Component {...pageProps} />
         </motion.div>
       </AnimatePresence>
-    </LayoutGroup>
+    </AnimateSharedLayout>
   );
 };
 
